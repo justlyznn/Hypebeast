@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPEBEAST Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Banner -->
+    <div class="bg-gray-800 text-white text-center py-3 text-sm">
+        New Season Coming! Discount 10% for all products! Check out now!
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold">HYPEBEAST</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-black">Categories</a>
+                    <a href="#" class="text-black font-medium">Collections</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Store</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Blog</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Find Store</a>
+                </nav>
+                
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search" class="pl-8 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400 text-sm"></i>
+                    </div>
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart text-gray-600"></i>
+                        <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </div>
+                    <span class="text-gray-600">Aditya</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">HYPEBEAST COLLECTION</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Find everything you need to look and feel your best, and shop the latest men's fashion and lifestyle products
+            </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="bg-black text-white px-6 py-2 rounded-full text-sm font-medium">All</button>
+            <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200">Jacket</button>
+            <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200">Pants</button>
+            <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200">Hoodie</button>
+            <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200">Shoes</button>
+            <button class="bg-gray-100 text-gray-700 p-2 rounded-full hover:bg-gray-200">
+                <i class="fas fa-sliders-h"></i>
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <!-- Product 1 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Off White Hoodie white" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Off White Hoodie white</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Stone Island Seersucker Cargo Pants 'Olive'" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Stone Island Seersucker Cargo Pants 'Olive'</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Air Jordan I Retro High Off - White Chicago" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Air Jordan I Retro High Off - White Chicago</h3>
+                    <p class="text-lg font-bold">$3,000.00</p>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Stone Island Jacket" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Stone Island Jacket</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Jordan Jumpman Air Fleece Hoodie Red" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Jordan Jumpman Air Fleece Hoodie Red</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Jordan Shorts Essentials" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Jordan Shorts Essentials</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Adidas Yeezy 350 V2" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Adidas Yeezy 350 V2</h3>
+                    <p class="text-lg font-bold">$1,000.00</p>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Off - White Long Sleeve" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Off - White Long Sleeve</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Stussy Black T - Shirt" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Stussy Black T - Shirt</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Nike Swoosh Fleece Pants" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Nike Swoosh Fleece Pants</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Nike GT Cut 2 University Red" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Nike GT Cut 2 University Red</h3>
+                    <p class="text-lg font-bold">$1,000.00</p>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                <div class="aspect-square relative">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Off White Hoodie white" class="w-full h-full object-cover">
+                    <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-medium text-sm mb-1">Off White Hoodie white</h3>
+                    <p class="text-lg font-bold">$150.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center">
+            <button class="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                Load more
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Column -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HYPEBEAST</h3>
+                    <p class="text-gray-400 text-sm">
+                        Our vision is to provide convenience and help increase your sales business.
+                    </p>
+                </div>
+
+                <!-- About Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">How it works</a></li>
+                        <li><a href="#" class="hover:text-white">Featured</a></li>
+                        <li><a href="#" class="hover:text-white">Partnership</a></li>
+                        <li><a href="#" class="hover:text-white">Business Relation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Events</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Podcast</a></li>
+                        <li><a href="#" class="hover:text-white">Invite a friend</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">Socials</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>©2023 HYPEBEAST. All rights reserved</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy & Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Category filter functionality
+        const filterButtons = document.querySelectorAll('button[class*="bg-gray-100"], button[class*="bg-black"]');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-black', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                this.classList.remove('bg-gray-100', 'text-gray-700');
+                this.classList.add('bg-black', 'text-white');
+            });
+        });
+
+        // Heart toggle functionality
+        const heartButtons = document.querySelectorAll('button i[class*="fa-heart"]');
+        heartButtons.forEach(heart => {
+            heart.parentElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (heart.classList.contains('far')) {
+                    heart.classList.remove('far');
+                    heart.classList.add('fas');
+                    heart.parentElement.classList.add('text-red-500');
+                } else {
+                    heart.classList.remove('fas');
+                    heart.classList.add('far');
+                    heart.parentElement.classList.remove('text-red-500');
+                    heart.parentElement.classList.add('text-gray-400');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
