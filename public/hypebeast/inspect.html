@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPEBEAST Product Inspect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Banner -->
+    <div class="bg-gray-800 text-white text-center py-3 text-sm">
+        New Season Coming! Discount 10% for all products! Check out now!
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold">HYPEBEAST</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-black">Categories</a>
+                    <a href="#" class="text-black font-medium">Collections</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Store</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Blog</a>
+                    <a href="#" class="text-gray-600 hover:text-black">Find Store</a>
+                </nav>
+                
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search" class="pl-8 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400 text-sm"></i>
+                    </div>
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart text-gray-600"></i>
+                        <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </div>
+                    <span class="text-gray-600">Aditya</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div class="space-y-4">
+                <!-- Main Product Image -->
+                <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                    <img src="/placeholder.svg?height=500&width=500" alt="Air Jordan I Retro High Off-White Chicago" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Thumbnail Images -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer border-2 border-black">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Product view 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Product view 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Product view 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Product view 4" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="space-y-6">
+                <div>
+                    <h1 class="text-3xl font-bold text-black mb-4">Air Jordan I Retro High Off - White Chicago</h1>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-gray-400 line-through text-lg">$3,000.00</span>
+                        <span class="text-3xl font-bold text-black">$2,500.00</span>
+                        <span class="bg-black text-white text-xs px-2 py-1 rounded">On Sale</span>
+                    </div>
+                    
+                    <!-- Rating -->
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">(4.9) 1.2K Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <h3 class="font-semibold text-black mb-2">Descriptions</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Introducing our latest collection, designed specifically for outdoor enthusiasts. Features a range of high performance outerwear with range of bold and vibrant colors and patterns to choose from.
+                    </p>
+                </div>
+
+                <!-- Available Color -->
+                <div>
+                    <h3 class="font-semibold text-black mb-3">Available Color</h3>
+                    <div class="flex space-x-3">
+                        <button class="w-8 h-8 bg-red-500 rounded border-2 border-black"></button>
+                        <button class="w-8 h-8 bg-blue-500 rounded border-2 border-transparent hover:border-gray-300"></button>
+                        <button class="w-8 h-8 bg-green-500 rounded border-2 border-transparent hover:border-gray-300"></button>
+                    </div>
+                </div>
+
+                <!-- Size -->
+                <div>
+                    <h3 class="font-semibold text-black mb-3">Size</h3>
+                    <div class="flex space-x-3">
+                        <button class="px-4 py-2 border border-gray-300 rounded text-sm hover:border-black">S</button>
+                        <button class="px-4 py-2 bg-black text-white rounded text-sm">M</button>
+                        <button class="px-4 py-2 border border-gray-300 rounded text-sm hover:border-black">L</button>
+                        <button class="px-4 py-2 border border-gray-300 rounded text-sm hover:border-black">XL</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex space-x-4 pt-6">
+                    <button class="flex-1 bg-gray-200 text-black py-3 px-6 rounded-lg font-medium hover:bg-gray-300 transition-colors">
+                        Add To Cart
+                    </button>
+                    <button class="flex-1 bg-black text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                        Checkout Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <section class="mt-20">
+            <h2 class="text-2xl font-bold text-black mb-8">This item can be cool with this</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Product 1 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Adidas Yeezy 350 V2" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Adidas Yeezy 350 V2</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 2 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Nike GT Cut 2 University Red" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Nike GT Cut 2 University Red</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 3 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Nike Zoom Kobe 5 Protro" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Nike Zoom Kobe 5 Protro</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 4 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Adidas Next Level Shock Red" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Adidas Next Level Shock Red</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 5 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Adidas Yeezy 350 V2" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Adidas Yeezy 350 V2</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 6 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Nike GT Cut 2 University Red" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Nike GT Cut 2 University Red</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 7 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Nike Zoom Kobe 5 Protro" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Nike Zoom Kobe 5 Protro</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+
+                <!-- Related Product 8 -->
+                <div class="group relative bg-gray-50 rounded-lg overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Adidas Next Level Shock Red" class="w-full h-full object-cover">
+                        <button class="absolute top-4 right-4 text-red-500 hover:text-red-600">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm mb-1">Adidas Next Level Shock Red</h3>
+                        <p class="text-lg font-bold">$1,000.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Column -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">HYPEBEAST</h3>
+                    <p class="text-gray-400 text-sm">
+                        Our vision is to provide convenience and help increase your sales business.
+                    </p>
+                </div>
+
+                <!-- About Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">How it works</a></li>
+                        <li><a href="#" class="hover:text-white">Featured</a></li>
+                        <li><a href="#" class="hover:text-white">Partnership</a></li>
+                        <li><a href="#" class="hover:text-white">Business Relation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Events</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Podcast</a></li>
+                        <li><a href="#" class="hover:text-white">Invite a friend</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials Column -->
+                <div>
+                    <h4 class="font-semibold mb-4">Socials</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>©2023 HYPEBEAST. All rights reserved</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy & Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for product functionality -->
+    <script>
+        // Thumbnail image switching
+        const thumbnails = document.querySelectorAll('.grid-cols-4 .aspect-square');
+        const mainImage = document.querySelector('.lg\\:grid-cols-2 .aspect-square img');
+
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', function() {
+                // Remove border from all thumbnails
+                thumbnails.forEach(t => t.classList.remove('border-black'));
+                thumbnails.forEach(t => t.classList.add('border-transparent'));
+                
+                // Add border to clicked thumbnail
+                this.classList.add('border-black');
+                this.classList.remove('border-transparent');
+                
+                // Update main image (in real app, would change src)
+                console.log(`Switching to image ${index + 1}`);
+            });
+        });
+
+        // Color selection
+        const colorButtons = document.querySelectorAll('[class*="bg-red-500"], [class*="bg-blue-500"], [class*="bg-green-500"]');
+        colorButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove border from all color buttons
+                colorButtons.forEach(btn => {
+                    btn.classList.remove('border-black');
+                    btn.classList.add('border-transparent');
+                });
+                
+                // Add border to selected color
+                this.classList.add('border-black');
+                this.classList.remove('border-transparent');
+            });
+        });
+
+        // Size selection
+        const sizeButtons = document.querySelectorAll('div:has(> h3:contains("Size")) + div button');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active state from all size buttons
+                sizeButtons.forEach(btn => {
+                    btn.classList.remove('bg-black', 'text-white');
+                    btn.classList.add('border', 'border-gray-300', 'text-black');
+                });
+                
+                // Add active state to selected size
+                this.classList.add('bg-black', 'text-white');
+                this.classList.remove('border', 'border-gray-300');
+            });
+        });
+
+        // Add to cart functionality
+        const addToCartBtn = document.querySelector('button:contains("Add To Cart")');
+        const checkoutBtn = document.querySelector('button:contains("Checkout Now")');
+
+        document.addEventListener('click', function(e) {
+            if (e.target.textContent === 'Add To Cart') {
+                alert('Product added to cart!');
+                // Update cart count
+                const cartCount = document.querySelector('.fa-shopping-cart + span');
+                cartCount.textContent = parseInt(cartCount.textContent) + 1;
+            }
+            
+            if (e.target.textContent === 'Checkout Now') {
+                alert('Proceeding to checkout...');
+            }
+        });
+
+        // Heart toggle for related products
+        const heartButtons = document.querySelectorAll('.fa-heart');
+        heartButtons.forEach(heart => {
+            heart.parentElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (heart.classList.contains('fas')) {
+                    heart.classList.remove('fas', 'text-red-500');
+                    heart.classList.add('far', 'text-gray-400');
+                } else {
+                    heart.classList.remove('far', 'text-gray-400');
+                    heart.classList.add('fas', 'text-red-500');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

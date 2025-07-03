@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPEBEAST - Streetwear & Lifestyle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-black text-white px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <a href="#" class="text-xl font-bold">HYPEBEAST</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-gray-300">Categories</a>
+                    <a href="#" class="hover:text-gray-300">Collections</a>
+                    <a href="#" class="hover:text-gray-300">Store</a>
+                    <a href="#" class="hover:text-gray-300">Blog</a>
+                    <a href="#" class="hover:text-gray-300">Find Store</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-search w-5 h-5 cursor-pointer hover:text-gray-300"></i>
+                <i class="fas fa-shopping-cart w-5 h-5 cursor-pointer hover:text-gray-300"></i>
+                <i class="fas fa-user w-5 h-5 cursor-pointer hover:text-gray-300"></i>
+                <span class="text-sm">Admin</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px] bg-black text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                 alt="Basketball player dunking" 
+                 class="w-full h-full object-cover opacity-70">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">HYPEBEAST Sport Project</h1>
+                <p class="text-lg mb-8 text-gray-200">
+                    Discover our latest sportswear for outdoor enthusiasts. Explore our range of high - performance gear with
+                    cutting-edge technology and vibrant colors and patterns to choose from.
+                </p>
+                <button class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors">
+                    Shop now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">New Arrivals</h2>
+                <p class="text-gray-600">
+                    Our new arrivals are built to withstand your activities while keeping you looking your best!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Off White Hoodie white" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Off White Hoodie white</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Air Jordan 1 Retro High" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-heart text-red-500"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Air Jordan 1 Retro High</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$1,000.00</span>
+                        <span class="text-gray-500 line-through text-sm">$1,500.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Nike Essential Fleece Pants" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Nike Essential Fleece Pants</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Nike Air Griffey Varsity Red" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Nike Air Griffey Varsity Red</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Adidas Originals Adicolor Fleece Hoodie Red" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-heart text-red-500"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Adidas Originals Adicolor Fleece Hoodie Red</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Nike Air Max 270 React" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Nike Air Max 270 React</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$1,000.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Jordan Dri-Fit Essentials Basketball Shorts Black" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Jordan Dri-Fit Essentials Basketball Shorts Black</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="group cursor-pointer">
+                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Nike Kobe 6 Protro 5 Rings" 
+                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="far fa-heart text-gray-400"></i>
+                        </button>
+                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                            <i class="fas fa-plus text-gray-600"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-medium text-sm mb-2">Nike Kobe 6 Protro 5 Rings</h3>
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold">$150.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="border border-gray-300 bg-transparent hover:bg-gray-50 px-8 py-2 rounded-full transition-colors">
+                    See All
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Promotion -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Store interior" 
+                         class="rounded-lg w-full h-96 object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Find Your Perfect Look at HYPEBEAST'S Stylist New on Semarang</h2>
+                    <p class="text-gray-600 mb-8">
+                        Discover your new style and strong style with our expert stylists. Experience personalized fashion 
+                        consultation and find the perfect pieces that match your personality and lifestyle. Our team of 
+                        professional stylists will help you create looks that make you feel confident and stylish.
+                    </p>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Come and Enjoy Sale!</h3>
+                        <div class="text-4xl font-bold mb-4">50%</div>
+                    </div>
+                    <button class="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-full transition-colors">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Featured Collections</h2>
+                <p class="text-gray-600">
+                    Dare to mix and match! Check out our collections to level up your fashion game
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Footwear -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Footwear" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Footwear</h3>
+                    </div>
+                </div>
+
+                <!-- Jacket -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Jacket" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Jacket</h3>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Accessories" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Accessories</h3>
+                    </div>
+                </div>
+
+                <!-- Headwear -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Headwear" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Headwear</h3>
+                    </div>
+                </div>
+
+                <!-- Bags -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Bags" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Bags</h3>
+                    </div>
+                </div>
+
+                <!-- Bottoms -->
+                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Bottoms" 
+                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Bottoms</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-6 bg-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Sign up Our Newsletter</h2>
+            <p class="text-gray-600 mb-8">Get the latest updates on new products and upcoming sales</p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" 
+                       placeholder="Enter your email" 
+                       class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                <button class="bg-black text-white hover:bg-gray-800 px-8 py-2 rounded-md transition-colors">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HYPEBEAST</h3>
+                    <p class="text-gray-400 text-sm">
+                        Your ultimate destination for streetwear and lifestyle products. Discover the latest trends and
+                        exclusive collections.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">About</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Press</a></li>
+                        <li><a href="#" class="hover:text-white">Business Relations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Events</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Forum</a></li>
+                        <li><a href="#" class="hover:text-white">Help & FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Socials</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>© 2024 HYPEBEAST. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy & Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

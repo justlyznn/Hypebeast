@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HYPEBEAST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white">
+    <div class="flex min-h-screen">
+        <!-- Left Side - Registration Form -->
+        <div class="flex-1 flex items-center justify-center px-8 py-12 bg-black">
+            <div class="w-full max-w-md space-y-8">
+                <!-- Logo -->
+                <div class="mb-12">
+                    <h1 class="text-2xl font-bold tracking-wider">HYPEBEAST</h1>
+                </div>
+                
+                <!-- Welcome Text -->
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-bold text-white">Welcome to your page</h2>
+                    <p class="text-gray-400">Please enter your details</p>
+                </div>
+                
+                <!-- Registration Form -->
+                <form class="space-y-6 mt-8">
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <input 
+                                type="text" 
+                                placeholder="First name" 
+                                class="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-white focus:outline-none transition-colors"
+                                required
+                            >
+                        </div>
+                        <div class="space-y-2">
+                            <input 
+                                type="text" 
+                                placeholder="Last name" 
+                                class="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-white focus:outline-none transition-colors"
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="space-y-2">
+                        <input 
+                            type="email" 
+                            placeholder="Email" 
+                            class="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-white focus:outline-none transition-colors"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Password Field -->
+                    <div class="space-y-2">
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            class="w-full bg-transparent border-0 border-b border-gray-600 pb-2 text-white placeholder-gray-400 focus:border-white focus:outline-none transition-colors"
+                            required
+                        >
+                        <p class="text-sm text-gray-400 mt-1">Must be at least 8 characters.</p>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-white text-black py-3 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors mt-8"
+                    >
+                        Create account
+                    </button>
+                    
+                    <!-- Login Link -->
+                    <p class="text-center text-gray-400 mt-4">
+                        Already have an account? 
+                        <a href="#" class="text-white hover:underline">Log in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Right Side - Image -->
+        <div class="flex-1 relative overflow-hidden">
+            <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/right_image-p6iN1VT7yrepwkD2mT57ULAF3hNr1z.png" 
+                alt="Fashion model in cream cardigan" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+    </div>
+    
+    <!-- Mobile Responsive Adjustments -->
+    <style>
+        @media (max-width: 768px) {
+            .flex {
+                flex-direction: column;
+            }
+            .flex-1:last-child {
+                min-height: 40vh;
+            }
+        }
+    </style>
+</body>
+</html>
