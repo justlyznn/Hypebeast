@@ -4,7 +4,7 @@
 <!-- Hero Section -->
     <section class="relative h-[600px] bg-black text-white overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+            <img src="<?= base_url('./hypebeast/img/dashboard.png') ?>"  
                  alt="Basketball player dunking" 
                  class="w-full h-full object-cover opacity-70">
         </div>

@@ -30,7 +30,10 @@
                         </a>
                         <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
                     </div>
-                    <span class="text-gray-600">Aditya</span>
+                    <span class="text-gray-600"><?= session()->get('username'); ?> (<?= session()->get('role'); ?>)</span>
+                        <a href="login" class="text-black">
+                            <i class="fas fa-sign-out-alt text-xl hover:text-gray-600 transition-colors"></i>
+                        </a>
                 </div>
             </div>
         </div>
