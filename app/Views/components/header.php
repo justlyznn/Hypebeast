@@ -15,7 +15,7 @@
                     <a href="collection" class="text-gray-600 hover:text-black">Collections</a>
                     <a href="store" class="text-gray-600 hover:text-black">Store</a>
                     <a href="blog" class="text-gray-600 hover:text-black">Blog</a>
-                    <a href="findStore" class="text-gray-600 hover:text-black">Find Store</a>
+                    <a href="find-store" class="text-gray-600 hover:text-black">Find Store</a>
                 </nav>
                 
                 <!-- Right Side Actions -->

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft UI Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e91e63',
+                        secondary: '#9c27b0',
+                        dark: '#344767',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-xl rounded-xl m-4 p-6">
+            <!-- Logo -->
+            <div class="flex items-center mb-8">
+                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-cube text-white text-sm"></i>
+                </div>
+                <span class="font-bold text-dark">Soft UI Dashboard</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg shadow-lg">
+                    <i class="fas fa-tv mr-3"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-table mr-3"></i>
+                    <span>Tables</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-receipt mr-3"></i>
+                    <span>Billing</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cube mr-3"></i>
+                    <span>Virtual Reality</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-language mr-3"></i>
+                    <span>RTL</span>
+                </a>
+            </nav>
+
+            <!-- Account Pages -->
+            <div class="mt-8">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Account Pages</h3>
+                <nav class="space-y-2">
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-user mr-3"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-sign-in-alt mr-3"></i>
+                        <span>Sign In</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-user-plus mr-3"></i>
+                        <span>Sign Up</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Help Section -->
+            <div class="mt-8 bg-gray-50 rounded-xl p-4">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-question text-blue-500"></i>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">Need help?</h4>
+                    <p class="text-sm text-gray-600 mb-4">Please check our docs</p>
+                    <button class="w-full bg-dark text-white py-2 px-4 rounded-lg text-sm font-medium">
+                        DOCUMENTATION
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upgrade Button -->
+            <button class="w-full mt-4 bg-gradient-to-r from-primary to-secondary text-white py-3 px-4 rounded-lg font-bold">
+                UPGRADE TO PRO
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <nav class="text-sm text-gray-500 mb-1">
+                        <span>Pages</span> / <span class="text-dark">Dashboard</span>
+                    </nav>
+                    <h1 class="text-xl font-bold text-dark">Dashboard</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Type here..." class="pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                    <button class="text-dark hover:text-primary">Sign In</button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <!-- Today's Money -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Today's Money</p>
+                            <h3 class="text-2xl font-bold text-dark">$53,000</h3>
+                            <p class="text-sm text-green-500">+55%</p>
+                        </div>
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-wallet text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Users -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Today's Users</p>
+                            <h3 class="text-2xl font-bold text-dark">2,300</h3>
+                            <p class="text-sm text-green-500">+3%</p>
+                        </div>
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Clients -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">New Clients</p>
+                            <h3 class="text-2xl font-bold text-dark">+3,462</h3>
+                            <p class="text-sm text-red-500">-2%</p>
+                        </div>
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-user-plus text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-600 mb-1">Sales</p>
+                            <h3 class="text-2xl font-bold text-dark">$103,430</h3>
+                            <p class="text-sm text-green-500">+5%</p>
+                        </div>
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Cards Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <!-- Soft UI Dashboard Card -->
+                <div class="bg-gradient-to-r from-primary to-secondary rounded-xl shadow-lg p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="text-sm opacity-90 mb-2">Built by developers</p>
+                        <h3 class="text-2xl font-bold mb-4">Soft UI Dashboard</h3>
+                        <p class="text-sm opacity-90 mb-6">From colors, cards, typography to complex elements, you will find the full documentation.</p>
+                        <button class="text-white hover:underline">Read More</button>
+                    </div>
+                    <div class="absolute right-8 top-1/2 transform -translate-y-1/2">
+                        <div class="w-24 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-rocket text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work with the rockets Card -->
+                <div class="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl shadow-lg p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">Work with the rockets</h3>
+                        <p class="text-sm opacity-90 mb-6">Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.</p>
+                        <button class="text-white hover:underline">Read More</button>
+                    </div>
+                    <div class="absolute right-8 bottom-0">
+                        <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Bar Chart -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-dark mb-2">Active Users</h3>
+                        <p class="text-sm text-green-500">(+23%) than last week</p>
+                    </div>
+                    <div class="h-64 bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg flex items-end justify-center p-4">
+                        <!-- Simulated Bar Chart -->
+                        <div class="flex items-end space-x-2 h-full">
+                            <div class="w-8 bg-white rounded-t h-1/4"></div>
+                            <div class="w-8 bg-white rounded-t h-3/4"></div>
+                            <div class="w-8 bg-white rounded-t h-1/2"></div>
+                            <div class="w-8 bg-white rounded-t h-2/3"></div>
+                            <div class="w-8 bg-white rounded-t h-full"></div>
+                            <div class="w-8 bg-white rounded-t h-1/3"></div>
+                            <div class="w-8 bg-white rounded-t h-3/4"></div>
+                            <div class="w-8 bg-white rounded-t h-2/3"></div>
+                            <div class="w-8 bg-white rounded-t h-full"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 mt-6">
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Users</span>
+                            </div>
+                            <p class="text-2xl font-bold text-dark">36K</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Clicks</span>
+                            </div>
+                            <p class="text-2xl font-bold text-dark">2m</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-3 h-3 bg-orange-500 rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Sales</span>
+                            </div>
+                            <p class="text-2xl font-bold text-dark">435$</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Items</span>
+                            </div>
+                            <p class="text-2xl font-bold text-dark">43</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line Chart -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-dark mb-2">Sales overview</h3>
+                        <p class="text-sm text-green-500">4% more in 2021</p>
+                    </div>
+                    <div class="h-64 relative">
+                        <!-- Simulated Line Chart -->
+                        <svg class="w-full h-full" viewBox="0 0 400 200">
+                            <path d="M 0 150 Q 50 100 100 120 T 200 80 T 300 60 T 400 40" 
+                                  stroke="#e91e63" stroke-width="3" fill="none"/>
+                            <path d="M 0 180 Q 50 160 100 140 T 200 120 T 300 100 T 400 80" 
+                                  stroke="#9c27b0" stroke-width="3" fill="none"/>
+                            <path d="M 0 160 Q 50 140 100 160 T 200 140 T 300 120 T 400 100" 
+                                  stroke="#344767" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-4">
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                        <span>Nov</span>
+                        <span>Dec</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
