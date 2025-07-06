@@ -5,26 +5,31 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
+use App\Models\UserModel;
+
 class AuthController extends BaseController
 {
+    protected $user;
+
     function __construct(){
         helper('form');
+        $this->user = new UserModel();
     }
 
-    public function generatepassword ()
-    {
-        echo password_hash('123',PASSWORD_DEFAULT);
-    }
+    // public function generatepassword ()
+    // {
+    //     echo password_hash('123',PASSWORD_DEFAULT);
+    // }
 
     public function login(){
     if ($this->request->getPost()) {
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $dataUser = ['username' => 'april', 'password' => '$2y$10$2hul/eSl5SuXCFydTKowcOeLgcdS.D9jfdfauqlrLIeQLqYwxPGNi', 'role' => 'admin']; // passw 123
+        $dataUser = $this->user->where(['username' => $username])->first();
 
-        if ($username == $dataUser['username']) {
-            if (password_verify($password, $dataUser['password'])) {
+        if ($dataUser) {
+	        if (password_verify($password, $dataUser['password'])) {
                 session()->set([
                     'username' => $dataUser['username'],
                     'role' => $dataUser['role'],
