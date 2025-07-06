@@ -15,9 +15,10 @@
                     Discover our latest sportswear for outdoor enthusiasts. Explore our range of high - performance gear with
                     cutting-edge technology and vibrant colors and patterns to choose from.
                 </p>
-                <button class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors">
-                    Shop now
-                </button>
+                <a href="<?= base_url('/store') ?>" 
+                    class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors inline-block">
+                        Shop now
+                </a>
             </div>
         </div>
     </section>
@@ -89,9 +90,10 @@
                         <h3 class="text-xl font-semibold mb-2">Come and Enjoy Sale!</h3>
                         <div class="text-4xl font-bold mb-4">50%</div>
                     </div>
-                    <button class="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-full transition-colors">
-                        Shop Now
-                    </button>
+                    <a href="<?= base_url('/store') ?>" 
+                        class="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-full transition-colors inline-block">
+                            Shop Now
+                    </a>
                 </div>
             </div>
         </div>
@@ -109,64 +111,64 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Footwear -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=shoes') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/footwear.png') ?>" 
-                         alt="Footwear" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Footwear" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Footwear</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Jacket -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=jacket') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/jacket.png') ?>" 
-                         alt="Jacket" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Jacket" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Jacket</h3>
                     </div>
-                </div>
+                </a>
 
-                <!-- Accessories -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <!-- Accesories -->
+                <a href="<?= base_url('/store?category=accesories') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/accesories.png') ?>" 
-                         alt="Accessories" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Accesories" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold">Accessories</h3>
+                        <h3 class="text-white text-xl font-bold">Accesories</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Headwear -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=headwear') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/headwear.png') ?>" 
-                         alt="Headwear" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Headwear" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Headwear</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Bags -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=bag') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/bags.png') ?>" 
-                         alt="Bags" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Bags" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Bags</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Bottoms -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=pants') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/bottoms.png') ?>" 
-                         alt="Bottoms" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Bottoms" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Bottoms</h3>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
