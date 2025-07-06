@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - Soft UI Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e91e63',
+                        secondary: '#9c27b0',
+                        dark: '#344767',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-xl rounded-xl m-4 p-6">
+            <!-- Logo -->
+            <div class="flex items-center mb-8">
+                <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-cube text-white text-sm"></i>
+                </div>
+                <span class="font-bold text-dark">Soft UI Dashboard</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-tv mr-3"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg shadow-lg">
+                    <i class="fas fa-table mr-3"></i>
+                    <span>Tables</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-receipt mr-3"></i>
+                    <span>Billing</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cube mr-3"></i>
+                    <span>Virtual Reality</span>
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-language mr-3"></i>
+                    <span>RTL</span>
+                </a>
+            </nav>
+
+            <!-- Account Pages -->
+            <div class="mt-8">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Account Pages</h3>
+                <nav class="space-y-2">
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-user mr-3"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-sign-in-alt mr-3"></i>
+                        <span>Sign In</span>
+                    </a>
+                    <a href="#" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-user-plus mr-3"></i>
+                        <span>Sign Up</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Help Section -->
+            <div class="mt-8 bg-gray-50 rounded-xl p-4">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-question text-blue-500"></i>
+                    </div>
+                    <h4 class="font-bold text-dark mb-2">Need help?</h4>
+                    <p class="text-sm text-gray-600 mb-4">Please check our docs</p>
+                    <button class="w-full bg-dark text-white py-2 px-4 rounded-lg text-sm font-medium">
+                        DOCUMENTATION
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upgrade Button -->
+            <button class="w-full mt-4 bg-gradient-to-r from-primary to-secondary text-white py-3 px-4 rounded-lg font-bold">
+                UPGRADE TO PRO
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <nav class="text-sm text-gray-500 mb-1">
+                        <span>Pages</span> / <span class="text-dark">Tables</span>
+                    </nav>
+                    <h1 class="text-xl font-bold text-dark">Tables</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Type here..." class="pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                    </div>
+                    <button class="text-dark hover:text-primary">Sign In</button>
+                </div>
+            </div>
+
+            <!-- Authors Table -->
+            <div class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="p-6 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-dark">Authors table</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Author</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Function</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Status</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Employed</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="John Michael" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">John Michael</p>
+                                            <p class="text-sm text-gray-500">john@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Manager</p>
+                                        <p class="text-sm text-gray-500">Organization</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">ONLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">23/04/18</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Alexa Liras" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">Alexa Liras</p>
+                                            <p class="text-sm text-gray-500">alexa@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Programator</p>
+                                        <p class="text-sm text-gray-500">Developer</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full">OFFLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">11/01/19</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Laurent Perrier" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">Laurent Perrier</p>
+                                            <p class="text-sm text-gray-500">laurent@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Executive</p>
+                                        <p class="text-sm text-gray-500">Projects</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">ONLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">19/09/17</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Michael Levi" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">Michael Levi</p>
+                                            <p class="text-sm text-gray-500">michael@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Programator</p>
+                                        <p class="text-sm text-gray-500">Developer</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">ONLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">24/12/08</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Richard Gran" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">Richard Gran</p>
+                                            <p class="text-sm text-gray-500">richard@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Manager</p>
+                                        <p class="text-sm text-gray-500">Executive</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full">OFFLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">04/10/21</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Miriam Eric" class="w-10 h-10 rounded-full mr-3">
+                                        <div>
+                                            <p class="font-semibold text-dark">Miriam Eric</p>
+                                            <p class="text-sm text-gray-500">miriam@creative-tim.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div>
+                                        <p class="font-semibold text-dark">Programtor</p>
+                                        <p class="text-sm text-gray-500">Developer</p>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full">OFFLINE</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <p class="text-sm text-gray-600">14/09/20</p>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="text-blue-500 hover:text-blue-700 text-sm font-medium">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Projects Table -->
+            <div class="bg-white rounded-xl shadow-lg">
+                <div class="p-6 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-dark">Projects table</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Project</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Budget</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Status</th>
+                                <th class="text-left py-4 px-6 text-xs font-bold text-gray-400 uppercase tracking-wider">Completion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fab fa-spotify text-white"></i>
+                                        </div>
+                                        <span class="font-semibold text-dark">Spotify</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-semibold text-dark">$2,500</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="text-gray-600">working</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <span class="text-sm text-gray-600 mr-3">60%</span>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
+                                            <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fab fa-invision text-white"></i>
+                                        </div>
+                                        <span class="font-semibold text-dark">Invision</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-semibold text-dark">$5,000</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="text-gray-600">done</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <span class="text-sm text-gray-600 mr-3">100%</span>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
+                                            <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fab fa-jira text-white"></i>
+                                        </div>
+                                        <span class="font-semibold text-dark">Jira</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-semibold text-dark">$3,400</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="text-gray-600">canceled</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <span class="text-sm text-gray-600 mr-3">30%</span>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
+                                            <div class="bg-red-500 h-2 rounded-full" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fab fa-slack text-white"></i>
+                                        </div>
+                                        <span class="font-semibold text-dark">Slack</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-semibold text-dark">$1,000</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="text-gray-600">canceled</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <span class="text-sm text-gray-600 mr-3">0%</span>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
+                                            <div class="bg-gray-400 h-2 rounded-full" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-3">
+                                            <i class="fas fa-code text-white"></i>
+                                        </div>
+                                        <span class="font-semibold text-dark">Webdev</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="font-semibold text-dark">$14,000</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="text-gray-600">working</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center">
+                                        <span class="text-sm text-gray-600 mr-3">80%</span>
+                                        <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
+                                            <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
