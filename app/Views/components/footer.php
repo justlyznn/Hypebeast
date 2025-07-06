@@ -1,3 +1,5 @@
+
+
 <footer class="bg-black text-white py-12 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
