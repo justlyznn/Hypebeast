@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
                 'username' => $faker->userName,
                 'email' => $faker->email,
                 'password' => password_hash('1234', PASSWORD_DEFAULT),
-                'role' => $faker->randomElement(['admin', 'guest']),
+                'role' => $faker->randomElement(['admin', 'user']),
                 'created_at' => date("Y-m-d H:i:s"),
             ];
             //print_r($data);

@@ -26,44 +26,40 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- First Row -->
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-4 px-6 text-sm text-gray-700">1</td> <!-- Row number -->
-                            <td class="py-4 px-6 text-sm text-gray-700">
-                                <span class="font-medium">Off White Hoodie white</span>
-                            </td>
-                            <td class="py-4 px-6 text-sm text-gray-700">$150.00</td>
-                            <td class="py-4 px-6 text-sm text-gray-700">19</td>
-                            <td class="py-4 px-6">
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Ready</span>
-                            </td>
-                            <td class="py-4 px-6">
-                                <!-- Gambar produk bisa ditambahkan disini -->
-                            </td>
-                            <td class="py-4 px-6">
-                                <button type="button" class="btn btn-primary text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-md" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-                                <button type="button" class="btn btn-danger text-white bg-red-500 hover:bg-red-700 px-4 py-2 rounded-md">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Second Row -->
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-4 px-6 text-sm text-gray-700">2</td> <!-- Row number -->
-                            <td class="py-4 px-6 text-sm text-gray-700">
-                                <span class="font-medium">Air Jordan 1 Retro High</span>
-                            </td>
-                            <td class="py-4 px-6 text-sm text-gray-700">$1,000.00</td>
-                            <td class="py-4 px-6 text-sm text-gray-700">190</td>
-                            <td class="py-4 px-6">
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Out Of Stock</span>
-                            </td>
-                            <td class="py-4 px-6">
-                                <!-- Gambar produk bisa ditambahkan disini -->
-                            </td>
-                            <td class="py-4 px-6">
-                                <button type="button" class="btn btn-primary text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-md" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-                                <button type="button" class="btn btn-danger text-white bg-red-500 hover:bg-red-700 px-4 py-2 rounded-md">Delete</button>
-                            </td>
-                        </tr>
+                        <?php if (!empty($product)) : ?>
+                            <?php $no = 1; foreach ($product as $product): ?>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-4 px-6 text-sm text-gray-700"><?= $no++ ?></td>
+                                    <td class="py-4 px-6 text-sm text-gray-700">
+                                        <span class="font-medium"><?= esc($product['name']) ?></span>
+                                    </td>
+                                    <td class="py-4 px-6 text-sm text-gray-700">Rp<?= number_format($product['price'], 0, ',', '.') ?></td>
+                                    <td class="py-4 px-6 text-sm text-gray-700"><?= esc($product['stock']) ?></td>
+                                    <td class="py-4 px-6">
+                                        <?php if ($product['status'] === 'ready') : ?>
+                                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Ready</span>
+                                        <?php else : ?>
+                                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Out Of Stock</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        <?php if (!empty($product['image'])) : ?>
+                                            <img src="<?= base_url('hypebeast/img/' . $product['image']) ?>" alt="<?= esc($product['name']) ?>" class="w-16 h-16 object-cover rounded">
+                                        <?php else : ?>
+                                            <span class="text-sm text-gray-400 italic">No image</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="py-4 px-6 space-x-2">
+                                        <button class="btn btn-primary text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-md">Edit</button>
+                                        <button class="btn btn-danger text-white bg-red-500 hover:bg-red-700 px-4 py-2 rounded-md">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else : ?>
+                            <tr>
+                                <td colspan="7" class="text-center text-gray-500 py-6">No products available.</td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>

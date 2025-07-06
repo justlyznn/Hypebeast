@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Transaction extends Migration
+class TransactionDetail extends Migration
 {
     public function up()
     {
@@ -15,26 +15,27 @@ class Transaction extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'username' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
-                'null' => FALSE,
-            ],
-            'total_harga' => [
-                'type' => 'DOUBLE',
-                'null' => FALSE,
-            ],
-            'alamat' => [
-                'type' => 'TEXT',
-                'null' => FALSE,
-            ],
-            'ongkir' => [
-                'type' => 'DOUBLE',
-                'null' => TRUE
-            ],
-            'status' => [
+            'transaction_id' => [
                 'type' => 'INT',
-                'constraint' => 1,
+                'constraint' => 11,
+                'unsigned' => TRUE,
+            ],
+            'product_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => TRUE,
+            ],
+            'jumlah' => [
+                'type' => 'INT',
+                'constraint' => 5,
+                'null' => FALSE,
+            ],
+            'diskon' => [
+                'type' => 'DOUBLE',
+                'null' => TRUE,
+            ],
+            'subtotal_harga' => [
+                'type' => 'DOUBLE',
                 'null' => FALSE,
             ],
             'created_at' => [
@@ -48,11 +49,11 @@ class Transaction extends Migration
         ]);
 
         $this->forge->addKey('id', TRUE);
-        $this->forge->createTable('transaction');
+        $this->forge->createTable('transaction_detail');
     }
 
     public function down()
     {
-        $this->forge->dropTable('transaction');
+        $this->forge->dropTable('transaction_detail');
     }
 }

@@ -5,9 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-// $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
-$routes->get('/home', 'HomeController::index');
 
 $routes->get('/login', 'AuthController::login');
 $routes->post('/login', 'AuthController::login');
@@ -15,15 +13,19 @@ $routes->get('/logout', 'AuthController::logout');
 
 $routes->get('/register', 'RegisterController::index');
 
-$routes->get('/dashboard-admin', 'DashboardAdminController::index', ['filter' => 'auth']);
-$routes->get('/produk-admin', 'ProdukAdminController::index', ['filter' => 'auth']);
-$routes->get('/order-admin', 'OrderAdminController::index', ['filter' => 'auth']);
+$routes->get('/dashboard-admin', 'DashboardAdminController::index', ['filter' => 'auth:admin']);
+$routes->get('/produk-admin', 'ProdukAdminController::index', ['filter' => 'auth:admin']);
+$routes->get('/order-admin', 'OrderAdminController::index', ['filter' => 'auth:admin']);
 
-$routes->get('/blog', 'BlogController::index', ['filter' => 'auth']);
-$routes->get('/cart', 'CartController::index', ['filter' => 'auth']);
-$routes->get('/collection', 'CollectionController::index', ['filter' => 'auth']);
-$routes->get('/store', 'StoreController::index', ['filter' => 'auth']);
-$routes->get('/find-store', 'FindStoreController::index', ['filter' => 'auth']);
-$routes->get('/produk-detail', 'ProdukDetailController::index', ['filter' => 'auth']);
+$routes->get('/blog', 'BlogController::index');
+$routes->get('/collection', 'CollectionController::index');
+$routes->get('/collection/(:segment)', 'CollectionController::index/$1');
+$routes->get('/store', 'StoreController::index');
+$routes->get('/store/(:segment)', 'StoreController::index/$1');
+$routes->get('/find-store', 'FindStoreController::index');
+$routes->get('/produk-detail', 'ProdukDetailController::index');
+
+$routes->post('/cart/add', 'CartController::add');
+$routes->get('/cart', 'CartController::index');
 
 $routes->get('auth/generatepassword', 'AuthController::generatepassword');

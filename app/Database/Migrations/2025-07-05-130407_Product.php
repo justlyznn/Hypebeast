@@ -10,44 +10,53 @@ class Product extends Migration
     {
         $this->forge->addField([
             'id' => [
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE,
+            ],
+            'name' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'price' => [
+                'type'       => 'DECIMAL',
+                'constraint' => '10,2',
+            ],
+            'category' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
+            'stock' => [
                 'type' => 'INT',
                 'constraint' => 11,
-                'unsigned' => TRUE,
-                'auto_increment' => TRUE
+                'default' => 0,
             ],
-            'nama' => [
-                'type' => 'VARCHAR',
+            'status' => [
+                'type' => 'ENUM',
+                'constraint' => ['ready', 'out_of_stock'],
+                'default' => 'ready',
+            ],
+            'image' => [
+                'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'null' => FALSE,
             ],
-            'harga' => [
-                'type' => 'DOUBLE',
-                'null' => FALSE,
-            ],
-            'jumlah' => [
-                'type' => 'INT',
-                'constraint' => 5,
-                'null' => FALSE,
-            ],
-            'foto' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
+            'description' => [
+                'type' => 'TEXT',
+                'null' => TRUE,
             ],
             'created_at' => [
                 'type' => 'datetime',
-                'null' => TRUE
+                'null' => TRUE,
             ],
             'updated_at' => [
                 'type' => 'datetime',
-                'null' => TRUE
-            ]
+                'null' => TRUE,
+            ],
         ]);
 
         $this->forge->addKey('id', TRUE);
         $this->forge->createTable('product');
     }
-
-    //--------------------------------------------------------------------
 
     public function down()
     {
