@@ -15,9 +15,10 @@
                     Discover our latest sportswear for outdoor enthusiasts. Explore our range of high - performance gear with
                     cutting-edge technology and vibrant colors and patterns to choose from.
                 </p>
-                <button class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors">
-                    Shop now
-                </button>
+                <a href="<?= base_url('/store') ?>" 
+                    class="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-full font-medium transition-colors inline-block">
+                        Shop now
+                </a>
             </div>
         </div>
     </section>
@@ -33,166 +34,38 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <!-- Product 1 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/pakaian1.png') ?>"
-                             alt="Off White Hoodie white" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Off White Hoodie white</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
+                <?php foreach ($product as $p): ?>
+                    <div class="group cursor-pointer">
+                        <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="<?= base_url('img/' . $p['image']) ?>" alt="<?= esc($p['name']) ?>" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <!-- Tombol Love -->
+                            <button 
+                                onclick="toggleFavorite(this)" 
+                                class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                                <i class="far fa-heart text-gray-400"></i>
+                            </button>
 
-                <!-- Product 2 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <a href="produk-detail" class="block">
-                            <img src="<?= base_url('./hypebeast/img/sepatu1.png') ?>"
-                                alt="Air Jordan 1 Retro High"
-                                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-heart text-red-500"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Air Jordan 1 Retro High</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$1,000.00</span>
-                        <span class="text-gray-500 line-through text-sm">$1,500.00</span>
-                    </div>
-                </div>
+                            <!-- Tombol Plus -->
+                            <button 
+                                onclick="addToCart(<?= $p['id'] ?>, '<?= esc($p['name']) ?>', <?= $p['price'] ?>, '<?= $p['image'] ?>')" 
+                                class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
+                                <i class="fas fa-plus text-gray-600"></i>
+                            </button>
 
-                <!-- Product 3 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/celana1.png') ?>" 
-                             alt="Nike Essential Fleece Pants" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
+                        </div>
+                        <h3 class="font-medium text-sm mb-2"><?= esc($p['name']) ?></h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="font-bold">Rp <?= number_format($p['price'], 0, ',', '.') ?></span>
+                        </div>
                     </div>
-                    <h3 class="font-medium text-sm mb-2">Nike Essential Fleece Pants</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+            </div>        
 
-                <!-- Product 4 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/sepatu2.png') ?>" 
-                             alt="Nike Air Griffey Varsity Red" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Nike Air Griffey Varsity Red</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/pakaian2.png') ?>" 
-                             alt="Adidas Originals Adicolor Fleece Hoodie Red" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-heart text-red-500"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Adidas Originals Adicolor Fleece Hoodie Red</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/sepatu3.png') ?>" 
-                             alt="Nike Air Max 270 React" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Nike Air Max 270 React</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$1,000.00</span>
-                    </div>
-                </div>
-
-                <!-- Product 7 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/celana2.png') ?>" 
-                             alt="Jordan Dri-Fit Essentials Basketball Shorts Black" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Jordan Dri-Fit Essentials Basketball Shorts Black</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="group cursor-pointer">
-                    <div class="relative mb-4 bg-gray-100 rounded-lg overflow-hidden">
-                        <img src="<?= base_url('./hypebeast/img/sepatu4.png') ?>" 
-                             alt="Nike Kobe 6 Protro 5 Rings" 
-                             class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="far fa-heart text-gray-400"></i>
-                        </button>
-                        <button class="absolute bottom-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50">
-                            <i class="fas fa-plus text-gray-600"></i>
-                        </button>
-                    </div>
-                    <h3 class="font-medium text-sm mb-2">Nike Kobe 6 Protro 5 Rings</h3>
-                    <div class="flex items-center space-x-2">
-                        <span class="font-bold">$150.00</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button class="border border-gray-300 bg-transparent hover:bg-gray-50 px-8 py-2 rounded-full transition-colors">
+            <div class="flex justify-center mt-8">
+                <a href="<?= base_url('/collection') ?>" 
+                class="inline-block border border-gray-300 bg-transparent hover:bg-gray-50 px-8 py-2 rounded-full transition-colors">
                     See All
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -217,9 +90,10 @@
                         <h3 class="text-xl font-semibold mb-2">Come and Enjoy Sale!</h3>
                         <div class="text-4xl font-bold mb-4">50%</div>
                     </div>
-                    <button class="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-full transition-colors">
-                        Shop Now
-                    </button>
+                    <a href="<?= base_url('/store') ?>" 
+                        class="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-full transition-colors inline-block">
+                            Shop Now
+                    </a>
                 </div>
             </div>
         </div>
@@ -237,64 +111,64 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Footwear -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=shoes') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/footwear.png') ?>" 
-                         alt="Footwear" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Footwear" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Footwear</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Jacket -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=jacket') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/jacket.png') ?>" 
-                         alt="Jacket" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Jacket" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Jacket</h3>
                     </div>
-                </div>
+                </a>
 
-                <!-- Accessories -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <!-- Accesories -->
+                <a href="<?= base_url('/store?category=accesories') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/accesories.png') ?>" 
-                         alt="Accessories" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Accesories" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                        <h3 class="text-white text-xl font-bold">Accessories</h3>
+                        <h3 class="text-white text-xl font-bold">Accesories</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Headwear -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=headwear') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/headwear.png') ?>" 
-                         alt="Headwear" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Headwear" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Headwear</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Bags -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=bag') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/bags.png') ?>" 
-                         alt="Bags" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Bags" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Bags</h3>
                     </div>
-                </div>
+                </a>
 
                 <!-- Bottoms -->
-                <div class="relative group cursor-pointer overflow-hidden rounded-lg">
+                <a href="<?= base_url('/store?category=pants') ?>" class="relative group cursor-pointer overflow-hidden rounded-lg block">
                     <img src="<?= base_url('./hypebeast/img/bottoms.png') ?>" 
-                         alt="Bottoms" 
-                         class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        alt="Bottoms" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                         <h3 class="text-white text-xl font-bold">Bottoms</h3>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>

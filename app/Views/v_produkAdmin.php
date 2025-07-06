@@ -38,7 +38,8 @@
                             <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">#</th>
                             <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Nama</th>
                             <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Harga</th>
-                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Jumlah</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Stok</th>
+                            <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Status</th>
                             <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Foto</th>
                             <th class="py-2 px-4 text-left text-sm font-medium text-gray-700">Aksi</th>
                         </tr>
@@ -50,6 +51,18 @@
                                 <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['name'] ?></td>
                                 <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['price'] ?></td>
                                 <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['stock'] ?></td>
+                                <td class="py-4 px-6 text-sm">
+                                    <?php if ($produk['status'] == 'Ready'): ?>
+                                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                            Ready
+                                        </span>
+                                    <?php else: ?>
+                                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                            Out of Stock
+                                        </span>
+                                    <?php endif; ?>
+                                </td>
+
                                 <td class="py-4 px-6">
                                     <?php if ($produk['image'] != '' and file_exists("img/" . $produk['image'])) : ?>
                                         <img src="<?php echo base_url() . "img/" . $produk['image'] ?>" width="100px">
@@ -79,16 +92,16 @@
                                         <?= csrf_field(); ?>
                                         <div class="p-4 space-y-4">
                                             <div>
-                                                <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
-                                                <input type="text" name="nama" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="nama" value="<?= $produk['name'] ?>" placeholder="Nama Barang" required>
+                                                <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                                                <input type="text" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="name" value="<?= $produk['name'] ?>" placeholder="Nama Barang" required>
                                             </div>
                                             <div>
-                                                <label for="harga" class="block text-sm font-medium text-gray-700">Harga</label>
-                                                <input type="text" name="harga" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="harga" value="<?= $produk['price'] ?>" placeholder="Harga Barang" required>
+                                                <label for="price" class="block text-sm font-medium text-gray-700">Harga</label>
+                                                <input type="text" name="price" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="price" value="<?= $produk['price'] ?>" placeholder="Harga Barang" required>
                                             </div>
                                             <div>
-                                                <label for="jumlah" class="block text-sm font-medium text-gray-700">Jumlah</label>
-                                                <input type="text" name="jumlah" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="jumlah" value="<?= $produk['stock'] ?>" placeholder="Jumlah Barang" required>
+                                                <label for="stock" class="block text-sm font-medium text-gray-700">Jumlah</label>
+                                                <input type="text" name="stock" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="stock" value="<?= $produk['stock'] ?>" placeholder="Jumlah Barang" required>
                                             </div>
                                             <div class="space-y-2">
                                                 <img src="<?php echo base_url() . "img/" . $produk['image'] ?>" width="100px">
@@ -101,7 +114,7 @@
                                             </div>
                                             <div>
                                                 <label for="foto" class="block text-sm font-medium text-gray-700">Foto</label>
-                                                <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="foto" name="foto">
+                                                <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="image" name="image">
                                             </div>
                                         </div>
                                         <div class="flex justify-between items-center p-4 border-t">
@@ -154,20 +167,20 @@
             <?= csrf_field(); ?>
             <div class="p-4 space-y-4">
                 <div>
-                    <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
-                    <input type="text" name="nama" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="nama" placeholder="Nama Barang" required>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="name" placeholder="Nama Barang" required>
                 </div>
                 <div>
-                    <label for="harga" class="block text-sm font-medium text-gray-700">Harga</label>
-                    <input type="text" name="harga" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="harga" placeholder="Harga Barang" required>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+                    <input type="text" name="price" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="price" placeholder="Harga Barang" required>
                 </div>
                 <div>
-                    <label for="jumlah" class="block text-sm font-medium text-gray-700">Jumlah</label>
-                    <input type="text" name="jumlah" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="jumlah" placeholder="Jumlah Barang" required>
+                    <label for="stock" class="block text-sm font-medium text-gray-700">Jumlah</label>
+                    <input type="text" name="stock" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="stock" placeholder="Jumlah Barang" required>
                 </div>
                 <div>
-                    <label for="foto" class="block text-sm font-medium text-gray-700">Foto</label>
-                    <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="foto" name="foto">
+                    <label for="image" class="block text-sm font-medium text-gray-700">Foto</label>
+                    <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="image" name="foto">
                 </div>
             </div>
             <div class="flex justify-between items-center p-4 border-t">
