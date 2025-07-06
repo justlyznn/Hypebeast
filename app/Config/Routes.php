@@ -26,3 +26,11 @@ $routes->get('/find-store', 'FindStoreController::index');
 $routes->get('/produk-detail', 'ProdukDetailController::index');
 
 $routes->get('auth/generatepassword', 'AuthController::generatepassword');
+
+$routes->group('product', function($routes) {
+    $routes->get('admin', 'ProdukAdminController::index');                // Daftar produk
+    $routes->get('create', 'ProdukAdminController::createOrUpdate');      // Form tambah produk
+    $routes->get('edit/(:num)', 'ProdukAdminController::createOrUpdate/$1'); // Form edit produk
+    $routes->post('storeOrUpdate/(:num)', 'ProdukAdminController::storeOrUpdate/$1'); // Menyimpan atau memperbarui produk
+    $routes->get('delete/(:num)', 'ProdukAdminController::delete/$1');   // Menghapus produk
+});
