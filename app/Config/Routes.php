@@ -15,11 +15,15 @@ $routes->get('/logout', 'AuthController::logout');
 
 $routes->get('/register', 'RegisterController::index');
 
+$routes->get('/dashboard-admin', 'DashboardAdminController::index', ['filter' => 'auth']);
+$routes->get('/produk-admin', 'ProdukAdminController::index', ['filter' => 'auth']);
+$routes->get('/order-admin', 'OrderAdminController::index', ['filter' => 'auth']);
+
 $routes->get('/blog', 'BlogController::index', ['filter' => 'auth']);
 $routes->get('/cart', 'CartController::index', ['filter' => 'auth']);
 $routes->get('/collection', 'CollectionController::index', ['filter' => 'auth']);
 $routes->get('/store', 'StoreController::index', ['filter' => 'auth']);
-$routes->get('/findStore', 'FindStoreController::index', ['filter' => 'auth']);
+$routes->get('/find-store', 'FindStoreController::index', ['filter' => 'auth']);
 $routes->get('/produk-detail', 'ProdukDetailController::index', ['filter' => 'auth']);
 
 $routes->get('auth/generatepassword', 'AuthController::generatepassword');
