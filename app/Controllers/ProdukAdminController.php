@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\ProductModel;
-use Dompdf\Dompdf;
 
 class ProdukAdminController extends BaseController
 {
@@ -94,30 +93,4 @@ class ProdukAdminController extends BaseController
         return redirect('produk-admin')->with('success', 'Data Berhasil Dihapus');
     }
 
-    public function download()
-    {
-        //get data from database
-        $product = $this->product->findAll();
-
-        //pass data to file view
-        $html = view('v_produkPDF', ['product' => $product]);
-
-        //set the pdf filename
-        $filename = date('y-m-d-H-i-s') . '-product';
-
-        // instantiate and use the dompdf class
-        $dompdf = new Dompdf();
-
-        // load HTML content (file view)
-        $dompdf->loadHtml($html);
-
-        // (optional) setup the paper size and orientation
-        $dompdf->setPaper('A4', 'potrait');
-
-        // render html as PDF
-        $dompdf->render();
-
-        // output the generated pdf
-        $dompdf->stream($filename);
-    }
 }

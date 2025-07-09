@@ -26,11 +26,8 @@
             }
             ?>
             <button type="button" class="btn rounded-md border-2 border-primary text-white bg-primary px-6 py-2.5 focus:outline-none mb-4" data-bs-toggle="modal" data-bs-target="#addModal">
-                <span class="icon-base bx bx-plus icon-sm me-2"></span>Tambah
+                <span class="icon-base bx bx-plus icon-sm me-2"></span>Tambah Produk
             </button>
-            <a type="button" class="btn rounded-md border-2 border-secondary text-white bg-secondary px-6 py-2.5 focus:outline-none btn-success" href="<?= base_url() ?>produk-admin/download">
-                <span class="icon-base bx bx-download icon-sm me-2"></span>Download
-            </a>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border-collapse">
                     <thead class="bg-gray-100">
