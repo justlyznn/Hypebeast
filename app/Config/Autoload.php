@@ -42,6 +42,7 @@ class Autoload extends AutoloadConfig
         'Config'      => APPPATH . 'Config',
         'App'         => APPPATH,
         'App\Models'  => APPPATH . 'Models',
+        'CodeIgniterCart' => ROOTPATH . 'vendor/jason-napolitano/codeigniter4-cart-module/src'
     ];
 
     /**

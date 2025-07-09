@@ -1,11 +1,12 @@
 <?php
 $hlm = "Home";
-if(uri_string()!=""){
-  $hlm = ucwords(uri_string());
+if (uri_string() != "") {
+    $hlm = ucwords(uri_string());
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@ if(uri_string()!=""){
 </head>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <body class="min-h-screen bg-white">
 
     <!-- Include Header -->
@@ -29,5 +31,15 @@ if(uri_string()!=""){
     <!-- Include Footer -->
     <?= $this->include('components/footer') ?>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <?= $this->renderSection('script') ?> 
+
 </body>
+
 </html>

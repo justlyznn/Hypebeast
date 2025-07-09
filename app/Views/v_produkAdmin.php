@@ -28,9 +28,9 @@
             <button type="button" class="btn rounded-md border-2 border-primary text-white bg-primary px-6 py-2.5 focus:outline-none mb-4" data-bs-toggle="modal" data-bs-target="#addModal">
                 <span class="icon-base bx bx-plus icon-sm me-2"></span>Tambah
             </button>
-            <button type="button" class="btn rounded-md border-2 border-secondary text-white bg-secondary px-6 py-2.5 focus:outline-none">
+            <a type="button" class="btn rounded-md border-2 border-secondary text-white bg-secondary px-6 py-2.5 focus:outline-none btn-success" href="<?= base_url() ?>produk-admin/download">
                 <span class="icon-base bx bx-download icon-sm me-2"></span>Download
-            </button>
+            </a>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border-collapse">
                     <thead class="bg-gray-100">
@@ -49,7 +49,7 @@
                             <tr class="border-b hover:bg-gray-50">
                                 <th class="py-4 px-6 text-sm text-gray-700"><?php echo $index + 1 ?></th>
                                 <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['name'] ?></td>
-                                <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['price'] ?></td>
+                                <td class="py-4 px-6 text-sm text-gray-700">Rp. <?php echo $produk['price'] ?></td>
                                 <td class="py-4 px-6 text-sm text-gray-700"><?php echo $produk['stock'] ?></td>
                                 <td class="py-4 px-6 text-sm">
                                     <?php if ($produk['status'] == 'Ready'): ?>
@@ -88,7 +88,7 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <form action="<?= base_url('/produk-admin/edit/' . $produk['id']) ?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?= base_url('produk-admin/edit/' . $produk['id']) ?>" method="post" enctype="multipart/form-data">
                                         <?= csrf_field(); ?>
                                         <div class="p-4 space-y-4">
                                             <div>
@@ -163,7 +163,7 @@
                 </svg>
             </button>
         </div>
-        <form action="<?= base_url('/produk-admin') ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= base_url('produk-admin') ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <div class="p-4 space-y-4">
                 <div>
@@ -175,12 +175,12 @@
                     <input type="text" name="price" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="price" placeholder="Harga Barang" required>
                 </div>
                 <div>
-                    <label for="stock" class="block text-sm font-medium text-gray-700">Jumlah</label>
+                    <label for="stock" class="block text-sm font-medium text-gray-700">Stock</label>
                     <input type="text" name="stock" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="stock" placeholder="Jumlah Barang" required>
                 </div>
                 <div>
                     <label for="image" class="block text-sm font-medium text-gray-700">Foto</label>
-                    <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="image" name="foto">
+                    <input type="file" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="image" name="image">
                 </div>
             </div>
             <div class="flex justify-between items-center p-4 border-t">

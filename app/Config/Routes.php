@@ -27,14 +27,26 @@ $routes->get('/produk-detail', 'ProdukDetailController::index');
 
 $routes->get('auth/generatepassword', 'AuthController::generatepassword');
 
-$routes->group('/produk-admin', ['filter' => 'auth'], function ($routes) { 
+$routes->group('produk-admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('', 'ProdukAdminController::index');
     $routes->post('', 'ProdukAdminController::create');
     $routes->post('edit/(:any)', 'ProdukAdminController::edit/$1');
     $routes->get('delete/(:any)', 'ProdukAdminController::delete/$1');
     $routes->get('download', 'ProdukAdminController::download');
 });
-$routes->post('/cart/add', 'CartController::add');
-$routes->get('/cart', 'CartController::index');
+
+$routes->group('cart', ['filter' => 'auth'], function ($routes) {
+    $routes->get('', 'CartController::index');
+    $routes->post('', 'CartController::cart_add');
+    $routes->post('edit', 'CartController::cart_edit');
+    $routes->get('delete/(:any)', 'CartController::cart_delete/$1');
+    $routes->get('clear', 'CartController::cart_clear');
+});
+
+$routes->get('checkout', 'CartController::checkout', ['filter' => 'auth']);
+$routes->post('buy', 'CartController::buy', ['filter' => 'auth']);
+
+$routes->get('get-location', 'CartController::getLocation', ['filter' => 'auth']);
+$routes->get('get-cost', 'CartController::getCost', ['filter' => 'auth']);
 
 $routes->get('auth/generatepassword', 'AuthController::generatepassword');
