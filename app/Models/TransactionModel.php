@@ -15,6 +15,6 @@ class TransactionModel extends Model
         'ongkir',
         'status',
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 }

@@ -32,7 +32,6 @@ $routes->group('produk-admin', ['filter' => 'auth'], function ($routes) {
     $routes->post('', 'ProdukAdminController::create');
     $routes->post('edit/(:any)', 'ProdukAdminController::edit/$1');
     $routes->get('delete/(:any)', 'ProdukAdminController::delete/$1');
-    $routes->get('download', 'ProdukAdminController::download');
 });
 
 $routes->group('cart', ['filter' => 'auth'], function ($routes) {
@@ -42,6 +41,9 @@ $routes->group('cart', ['filter' => 'auth'], function ($routes) {
     $routes->get('delete/(:any)', 'CartController::cart_delete/$1');
     $routes->get('clear', 'CartController::cart_clear');
 });
+
+$routes->get('pesanan', 'InvoiceController::index', ['filter' => 'auth:user']);
+$routes->get('pesanan/download', 'InvoiceController::download', ['filter' => 'auth:user']);
 
 $routes->get('checkout', 'CartController::checkout', ['filter' => 'auth']);
 $routes->post('buy', 'CartController::buy', ['filter' => 'auth']);

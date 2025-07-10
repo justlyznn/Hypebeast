@@ -9,11 +9,11 @@ class DashboardAdminController extends BaseController
 {
     public function index()
     {
+        // Ambil data transaksi dari model
         $transactionModel = new TransactionModel();
-        // Ambil data penjualan dan abaikan kolom 'ongkir'
-        $sales = $transactionModel->findAll(); 
+        $sales = $transactionModel->findAll();  // Mengambil semua transaksi
 
-        // Kirim data ke tampilan
+        // Kirim data ke tampilan dashboard admin
         return view('v_dashboardAdmin', ['sales' => $sales]);
     }
 }
